@@ -2,17 +2,9 @@
 @model RazorPages.Pages.IndexModel
 @{
     var title = Model.Title;
-
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-    <html>
-    <head>
-    <title>@title</title>
-</head>
-    <body>
-    <h1>@title</h1>
+<h1>@title</h1>
 
-    <a href="~/movies">Movies</a>
-</body>
-    </html>
+<a href="~/movies">Movies</a>

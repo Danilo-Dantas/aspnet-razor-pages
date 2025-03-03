@@ -1,24 +1,16 @@
 ﻿@page "/movies"
 @model RazorPages.Pages.MoviesModel
 @{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-    <html>
-    <head>
-        <title>Movies</title>
-    </head>
-    <body>
-        <h1>My Movies</h1>
+<h1>My Movies</h1>
 
-        <ul>
-            @foreach (var movie in Model.Movies)
-            {
-                <li>
-                    <a href="/movie/@movie.Permalink">@movie.Name </a>
-                </li>
-                
-            }
-        </ul>
-    </body>
-    </html>
+<ul>
+    @foreach (var movie in Model.Movies)
+    {
+        <li>
+            <a href="/movie/@movie.Permalink">@movie.Name </a>
+        </li>
+    }
+</ul>
