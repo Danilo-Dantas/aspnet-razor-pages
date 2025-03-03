@@ -10,7 +10,7 @@ namespace RazorPages.Data
             this.Database.EnsureCreated();
         }
 
-        public MoviesContext(DbContextOptions<MoviesContext> options)
+        public MoviesContext(DbContextOptions<MoviesContext> options) : base(options)
         {
             this.Database.EnsureCreated();
         }
@@ -42,7 +42,7 @@ namespace RazorPages.Data
                 {
                     Id = counter,
                     Name = name,
-                    permalink = slugfy.GenerateSlug(name)
+                    Permalink = slugfy.GenerateSlug(name)
                 });
                 counter++;
             }

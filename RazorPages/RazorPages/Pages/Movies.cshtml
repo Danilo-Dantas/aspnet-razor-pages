@@ -10,5 +10,15 @@
     </head>
     <body>
         <h1>My Movies</h1>
+
+        <ul>
+            @foreach (var movie in Model.Movies)
+            {
+                <li>
+                    <a href="/movie/@movie.Permalink">@movie.Name </a>
+                </li>
+                
+            }
+        </ul>
     </body>
     </html>
