@@ -6,10 +6,10 @@
 
 <h1>My Movies</h1>
 
-<ul>
+<ul class="list-group">
     @foreach (var movie in Model.Movies)
     {
-        <li>
+        <li class="list-group-item">
             <a href="/movie/@movie.Permalink">@movie.Name </a>
         </li>
     }
