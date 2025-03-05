@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPages.Data;
 
-namespace RazorPages.Pages
+namespace RazorPages.Pages.Movies
 {
-    public class MoviesModel(MoviesContext moviesContext) : PageModel
+    public class IndexModel(MoviesContext moviesContext) : PageModel
     {
         public ICollection<Movie> Movies { get; private set; }
 
